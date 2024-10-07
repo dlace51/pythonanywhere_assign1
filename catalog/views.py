@@ -85,7 +85,7 @@ def author_delete(request, pk):
 
 class BookCreate(CreateView):
     model = Book
-    fields = ['title', 'author', 'isbn', 'genre', 'book_image']
+    fields = ['title', 'author','summary', 'isbn', 'genre', 'book_image']
 
     def form_valid(self, form):
         post = form.save(commit=False)
@@ -95,7 +95,7 @@ class BookCreate(CreateView):
 
 class BookUpdate(UpdateView):
     model = Book
-    fields = ['title', 'author', 'isbn', 'genre', 'book_image']
+    fields = ['title', 'author', 'summary', 'isbn', 'genre', 'book_image']
 
     def form_valid(self, form):
         post = form.save(commit=False)
